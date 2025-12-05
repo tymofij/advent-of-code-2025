@@ -10,8 +10,6 @@ ranges.sort(key=lambda x: x[0])
 
 
 def merge(a, b, c, d):
-    if (a, b) == (c, d):
-        return a, b
     if (c <= a <= d) or (a <= c <= b):
         return min(a, c), max(b, d)
     return a, b
